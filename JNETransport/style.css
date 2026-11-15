@@ -1,0 +1,159 @@
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    background-color: #0f1b2f;
+    position: relative;
+}
+.nav-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.nav-toggle span {
+    display: block;
+    width: 1.6rem;
+    height: 2px;
+    margin: 5px 0;
+    background-color: currentColor;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+.nav-links a:hover {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 1rem;
+}
+
+.form-btn {
+    display: inline-block;
+    background-color: lightblue;
+    color: navy;
+    text-decoration: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.form-btn:hover {
+    background-color: white;
+    color: navy;
+    border: 1px solid navy;
+}
+
+
+.logo {
+    inline-size: 80px;
+    block-size: auto;
+    display: block;
+}
+.slogan-text {
+    color: white;
+    text-align: end;
+    margin:0 0.75rem 0 auto;
+}
+
+.slogan-text h1 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+.slogan-text small {
+    display: block;
+    font-size: 0.6rem;
+    color: #c9a85b;
+}
+body {
+    background-color: #0f1b2f;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.body-center{
+    color: white;
+}
+
+.body-center p{
+    color: #c9a85b;
+}
+p {
+    color: white;
+}
+
+@media (max-width: 700px) {
+    .main-nav {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .nav-toggle {
+        display: block;
+        order: 0;
+    }
+
+    .slogan-text {
+        flex: 1;
+        margin: 0;
+        text-align: center;
+        order: 1;
+    }
+
+    .slogan-text h1 {
+        font-size: 1.1rem;
+    }
+
+    .slogan-text small {
+        font-size: 0.55rem;
+    }
+
+    .logo-wrap,
+    .nav-right {
+        order: 2;
+    }
+
+    .logo {
+        width: 56px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex: 0 0 100%;
+        flex-direction: column;
+        gap: 0;
+        order: 3;
+        padding-top: 0.5rem;
+    }
+
+    .main-nav.menu-ready .nav-links {
+        display: none;
+    }
+
+    .main-nav.menu-ready .nav-links.is-open {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.75rem 0;
+    }
+}
